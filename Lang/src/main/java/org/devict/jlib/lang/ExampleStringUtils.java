@@ -7,7 +7,7 @@ import org.apache.commons.lang3.StringUtils;
  *
  * Shows useful methods on the Apache Commons Lang StringUtils utility class
  */
-public class ExampleStringUtils
+public final class ExampleStringUtils
 {
    public static void main(String[] args)
    {

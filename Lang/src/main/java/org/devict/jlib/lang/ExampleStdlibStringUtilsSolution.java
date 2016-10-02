@@ -5,7 +5,7 @@ package org.devict.jlib.lang;
  *
  * Shows what happens when you use the standard library
  */
-public class ExampleStdlibStringUtilsSolution
+public final class ExampleStdlibStringUtilsSolution
 {
    public static void main(String[] args)
    {
