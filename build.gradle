@@ -5,13 +5,6 @@ subprojects {
       jcenter()
    }
 
-   dependencies {
-      compile 'org.slf4j:slf4j-api:1.7.21'
-
-      compile 'org.codehaus.groovy:groovy-all:2.4.7'
-
-      testCompile 'junit:junit:4.12'
-   }
    jar { //this is a cheat to make the demos easier to run from the command line
       from {
          (configurations.runtime).collect {
