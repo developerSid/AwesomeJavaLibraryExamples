@@ -1,0 +1,6 @@
+
+include 'Lang'
+include 'JGroupsAgent'
+include 'JGroupsHandler'
+
+rootProject.name = 'DevICTJavaLibraries'

@@ -1,0 +1,5 @@
+dependencies {
+   compile 'org.apache.commons:commons-lang3:3.4'
+
+   compile 'org.jgroups:jgroups:3.6.10.Final'
+}
