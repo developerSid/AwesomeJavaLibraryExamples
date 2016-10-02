@@ -55,8 +55,10 @@ library (because they don't actually have to write business logic in Java)
          1. will throw a NullPointerException
       1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.ExampleStringUtils
          1. Won't throw a NullPointerException
-  * SystemUtils
+  * SystemUtils - shortcuts for getting information about the system or the JVM that is running your application
       1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.ExampleSystemUtils
+  * WordUtils - Word based formatting of strings
+      1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.text.ExampleWordUtils
 
 ## [Logback](http://logback.qos.ch, "Logback Logging Library")
 This is the logging library I prefer right now primarily because it allows for configuration through

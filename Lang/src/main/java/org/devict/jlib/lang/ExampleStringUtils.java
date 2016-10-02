@@ -14,7 +14,12 @@ public final class ExampleStringUtils
       String op1 = "IgnoreCase";
       String op2 = "IGNORECASE";
       String op3 = null;
+      String op4 = "   ";
       System.out.printf("Strings %s, %s are equal when you ignore case: [%b]\n", op1, op2, StringUtils.equalsIgnoreCase(op1, op2));
       System.out.printf("Strings %s, %s are equal when you ignore case: [%b]\n", op2, op3, StringUtils.equalsIgnoreCase(op2, op3));
+
+      System.out.printf("Strings %s is blank: [%b]\n", op1, StringUtils.isBlank(op1));
+      System.out.printf("Strings %s is blank: [%b]\n", op3, StringUtils.isBlank(op3));
+      System.out.printf("Strings %s is blank: [%b]\n", op4, StringUtils.isBlank(op4));
    }
 }
