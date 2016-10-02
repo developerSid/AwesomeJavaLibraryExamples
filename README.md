@@ -82,6 +82,7 @@ build separate parts of the system without perfect knowledge of the other applic
 The example provided here isn't as clear cut as the others because I wanted to show changing the schema slightly.
 
 To Run
+
 1. java -cp Avro/build/libs/Avro.jar org.devict.jlib.avro.ExampleAvroWrite #write with an older schema
 1. java -cp Avro/build/libs/Avro.jar org.devict.jlib.avro.ExampleAvroRead #read with a newer schema
 
