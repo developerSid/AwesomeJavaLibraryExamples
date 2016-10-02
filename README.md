@@ -26,7 +26,10 @@ Root of Apache Commons Proper.  There are many sub projects here that are curren
         * [many others](https://commons.apache.org/proper/commons-lang/javadocs/api-release/index.html)
     * To run the examples (./gradlew clean build)
       1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.ExampleStdlibStringUtilsSolution
+         1. will throw a NullPointerException
       1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.ExampleStringUtils
+         1. Won't throw a NullPointerException
+      1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.ExampleSystemUtils
 
 ## [JGroups clustering](http://www.jgroups.org "JGroups clustering")
   JGroups is a toolkit for reliable messaging. It can be used to create clusters whose nodes can send messages to each other.
