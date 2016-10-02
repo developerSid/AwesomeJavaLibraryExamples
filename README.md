@@ -40,6 +40,7 @@ Root of Apache Commons Proper.  There are many sub projects here that are curren
   * Receives messages from the main cluster server
   
 To run the examples run these commands in 3 separate console windows
+
 1. java -Djava.net.preferIPv4Stack=true -cp JGroupsHandler/build/libs/JGroupsHandler.jar org.devict.jlib.cluster.handler.JClusterHandler
 1. java -Djava.net.preferIPv4Stack=true -cp JGroupsAgent/build/libs/JGroupsAgent.jar org.devict.jlib.cluster.agent.JClusterAgent 
 1. java -Djava.net.preferIPv4Stack=true -cp JGroupsAgent/build/libs/JGroupsAgent.jar org.devict.jlib.cluster.agent.JClusterAgent
