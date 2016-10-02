@@ -1,6 +1,8 @@
 
 include 'Lang'
+include 'Collections'
 include 'Logback'
+include 'Avro'
 include 'JGroupsAgent'
 include 'JGroupsHandler'
 

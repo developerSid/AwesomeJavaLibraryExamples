@@ -22,7 +22,9 @@ message to an output it is less of a framework.
 
 ## Getting started
 The project uses Gradle for it's builds to simplify dependency (library) management 
-as well as quick and easy JAR creation for running the examples.
+as well as quick and easy JAR creation for running the examples.  It does in my 
+opinion abuse what you should use the Gradle multi-project support so please do not
+do this with a production system.
 
 1. Clone this project
    1. git clone https://github.com/developerSid/DevICTJavaLibraries.git
@@ -56,13 +58,32 @@ library (because they don't actually have to write business logic in Java)
       1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.ExampleStringUtils
          1. Won't throw a NullPointerException
   * SystemUtils - shortcuts for getting information about the system or the JVM that is running your application
-      1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.ExampleSystemUtils
+    1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.ExampleSystemUtils
   * WordUtils - Word based formatting of strings
-      1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.text.ExampleWordUtils
+    1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.text.ExampleWordUtils
   * StrBuilder - StringBuilder/StringBuffer replacement
-      1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.text.ExampleStrBuilder
+    1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.text.ExampleStrBuilder
   * Tuples - Simple pair and triple generic containers
-      1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.tuple.ExampleTriple
+    1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.tuple.ExampleTriple
+### [Apache Commons Collections](https://commons.apache.org/proper/commons-collections/, "Apache Commons Collections")
+* Apache Commons Collections - Yet more things the Java Standard Library's collections should provide, but doesn't.
+(However they have added a bunch of stuff inspired by this library over the years see java.util.Collections)
+  * CollectionUtils - helpful utility methods for dealing with collections
+    1. java -cp Collections/build/libs/Collections.jar org.devict.jlib.collections.ExampleCollectionUtils
+    
+## [Apache Avro](https://avro.apache.org/, "Schema based Data Serialization")
+Apache Avro is very similar to Google's Protocol buffers, however it's main advantage is that it sends the schema
+the data was enconded with along with the message making it easier to evolve the schema over time.  This is useful
+when building distributed systems using messaging middleware like Apache Kafka. When used with a Schema server
+you can build flexible processing systems that aren't as tightly coupled as they would be if you just shared a library
+of data classes for each application.  Meaning you can upgrade applications slowly allowing for different teams to 
+build separate parts of the system without perfect knowledge of the other applications.
+
+The example provided here isn't as clear cut as the others because I wanted to show changing the schema slightly.
+
+To Run
+1. java -cp Avro/build/libs/Avro.jar org.devict.jlib.avro.ExampleAvroWrite #write with an older schema
+1. java -cp Avro/build/libs/Avro.jar org.devict.jlib.avro.ExampleAvroRead #read with a newer schema
 
 ## [Logback](http://logback.qos.ch, "Logback Logging Library")
 This is the logging library I prefer right now primarily because it allows for configuration through

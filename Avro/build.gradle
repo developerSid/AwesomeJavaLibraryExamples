@@ -1,0 +1,5 @@
+dependencies {
+   compile 'org.apache.avro:avro:1.8.1'
+   compile 'commons-io:commons-io:2.5'
+   compile 'org.apache.commons:commons-collections4:4.1'
+}
