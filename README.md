@@ -59,6 +59,10 @@ library (because they don't actually have to write business logic in Java)
       1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.ExampleSystemUtils
   * WordUtils - Word based formatting of strings
       1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.text.ExampleWordUtils
+  * StrBuilder - StringBuilder/StringBuffer replacement
+      1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.text.ExampleStrBuilder
+  * Tuples - Simple pair and triple generic containers
+      1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.tuple.ExampleTriple
 
 ## [Logback](http://logback.qos.ch, "Logback Logging Library")
 This is the logging library I prefer right now primarily because it allows for configuration through
