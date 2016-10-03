@@ -1,5 +1,7 @@
 package org.devict.jlib.avro.data;
 
+import java.util.List;
+
 /**
  * Created by Gary on 10/2/16.
  *
@@ -14,7 +16,7 @@ public class AdvancedEmployee extends Employee
 
    }
 
-   public AdvancedEmployee(String name, int age, String[] emails, Employee b, String gender)
+   public AdvancedEmployee(String name, int age, List<String> emails, Employee b, String gender)
    {
       super(name, age, emails);
       this.gender = gender;

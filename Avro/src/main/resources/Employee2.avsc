@@ -2,9 +2,28 @@
   "type": "record",
   "name": "Employee",
   "fields": [
-    {"name": "name", "type": "string"},
-    {"name": "yrs", "type": "int", "aliases": ["age"]},
-    {"name": "gender", "type": "string", "default":"unknown"},
-    {"name": "emails", "type": {"type": "array", "items": "string"}}
+    {
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "name": "yrs",
+      "type": "int",
+      "aliases": [
+        "age"
+      ]
+    },
+    {
+      "name": "gender",
+      "type": ["string", "null"],
+      "default": "unknown"
+    },
+    {
+      "name": "emails",
+      "type": {
+        "type": "array",
+        "items": "string"
+      }
+    }
   ]
 }

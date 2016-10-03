@@ -1,6 +1,7 @@
 package org.devict.jlib.avro.data;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by Gary on 10/2/16.
@@ -11,14 +12,14 @@ public class Employee
 {
    private String name;
    private int age;
-   private String[] mails;
+   private List<String> mails;
 
    public Employee()
    {
 
    }
 
-   public Employee(String name, int age, String[] emails)
+   public Employee(String name, int age, List<String> emails)
    {
       this.name = name;
       this.age = age;
@@ -27,8 +28,7 @@ public class Employee
 
    @Override public String toString()
    {
-      return "Employee{" + "name='" + name + '\'' + ", age=" + age + ", mails="
-         + Arrays.toString(mails) + '}';
+      return "Employee{" + "name='" + name + '\'' + ", age=" + age + ", mails=" + mails + '}';
    }
 
    public void setName(String name)
@@ -41,7 +41,7 @@ public class Employee
       this.age = age;
    }
 
-   public void setMails(String[] mails)
+   public void setMails(List<String> mails)
    {
       this.mails = mails;
    }
@@ -56,7 +56,7 @@ public class Employee
       return age;
    }
 
-   public String[] getMails()
+   public List<String> getMails()
    {
       return mails;
    }
