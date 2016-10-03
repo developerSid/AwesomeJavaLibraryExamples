@@ -1,5 +1,6 @@
 package org.devict.jlib.avro;
 
+import org.apache.commons.io.FileUtils;
 import org.devict.jlib.avro.data.Employee;
 import org.devict.jlib.avro.serializer.AvroWriteSerializer;
 
@@ -10,19 +11,22 @@ import java.util.Arrays;
 
 /**
  * Created by Gary on 10/2/16.
+ *
+ * Program to serialize an Employee object to a file for consumption by another program
  */
 public class ExampleAvroWrite
 {
    public static void main(String[] args) throws IOException
    {
+      File outputFile = new File(FileUtils.getTempDirectory(), "employee.avro");
       Employee employee = new Employee("Joe", 31, Arrays.asList( "joe@abc.com", "joe@gmail.com"));
-      AvroWriteSerializer serilizer = new AvroWriteSerializer();
+      AvroWriteSerializer serializer = new AvroWriteSerializer();
 
-      try(FileOutputStream out = new FileOutputStream(new File("/tmp/employee.avro")))
+      try(FileOutputStream out = new FileOutputStream(outputFile))
       {
-         serilizer.serialize(employee, out);
+         serializer.serialize(employee, out);
       }
 
-      System.out.println(employee);
+      System.out.printf("%s \nsaved to %s\n", employee, outputFile.getAbsolutePath());
    }
 }

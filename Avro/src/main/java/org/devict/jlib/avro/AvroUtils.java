@@ -40,7 +40,7 @@ public final class AvroUtils
       return record.get(field.pos());
    }
 
-   public static <T, R> List<R> readEmails(GenericData.Record record, String fieldName, Function<T, R> transformer)
+   public static <T, R> List<R> getArray(GenericData.Record record, String fieldName, Function<T, R> transformer)
    {
       GenericData.Array<T> emails = (GenericData.Array<T>)record.get(fieldName);
 
