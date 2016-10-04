@@ -38,10 +38,25 @@ do this with a production system.
       instead use the Spring-boot Gradle plugin
  
 
-## [Apache Commons](https://commons.apache.org/components.html, "Apache Commons Proper")
-Root of Apache Commons Proper.  There are many sub projects here that are currently 
+## [Apache Commons](https://commons.apache.org/ "Apache Commons Proper")
+
+Apache Commons is broken up into three parts
+1. Apache Commons Proper
+   1. "A repository of reusable Java components"
+   1. Projects here are kept up to date and have continuing development and support.
+1. Apache Commons Sandbox
+   1. "A workspace for Java component development"
+   1. Newer development happens here for projects that hope to one day make it into Proper
+   1. May or may not be maintained anymore
+1. Apache Commons Dormant
+   1. "A repository of components that are currently inactive"
+   1. Basically dead no longer maintained code that you can still use, but you will be on
+   your own supporting it.  At least it is open source so if there is something you can
+   use to bootstrap something you are working on you can always fork and maintain yourself
+
+Root of Apache Commons Proper.  There are many sub projects here that are currently
 maintained and are usually meant to solve a single problem that is reusable within your projects.
-### [Apache Commons Lang](https://commons.apache.org/proper/commons-lang/, "Apache Commons Lang")
+### [Apache Commons Lang](https://commons.apache.org/proper/commons-lang/ "Apache Commons Lang")
 * Apache Commons Lang - The Stuff nobody on the JCP thought should be in the standard 
 library (because they don't actually have to write business logic in Java)
   * StringUtils - org.apache.commons.lang3.StringUtils
@@ -65,13 +80,13 @@ library (because they don't actually have to write business logic in Java)
     1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.text.ExampleStrBuilder
   * Tuples - Simple pair and triple generic containers
     1. java -cp Lang/build/libs/Lang.jar org.devict.jlib.lang.tuple.ExampleTriple
-### [Apache Commons Collections](https://commons.apache.org/proper/commons-collections/, "Apache Commons Collections")
+### [Apache Commons Collections](https://commons.apache.org/proper/commons-collections/ "Apache Commons Collections")
 * Apache Commons Collections - Yet more things the Java Standard Library's collections should provide, but doesn't.
 (However they have added a bunch of stuff inspired by this library over the years see java.util.Collections)
   * CollectionUtils - helpful utility methods for dealing with collections
     1. java -cp Collections/build/libs/Collections.jar org.devict.jlib.collections.ExampleCollectionUtils
     
-## [Apache Avro](https://avro.apache.org/, "Schema based Data Serialization")
+## [Apache Avro](https://avro.apache.org/ "Schema based Data Serialization")
 Apache Avro is very similar to Google's Protocol buffers, however it's main advantage is that it sends the schema
 the data was encoded with along with the message making it easier to evolve the schema over time.  This is useful
 when building distributed systems using messaging middleware like Apache Kafka. When used with a Schema server
