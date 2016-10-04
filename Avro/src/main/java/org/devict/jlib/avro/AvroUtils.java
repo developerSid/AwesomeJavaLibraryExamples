@@ -5,6 +5,7 @@ import org.apache.avro.file.DataFileStream;
 import org.apache.avro.generic.GenericData;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -28,16 +29,22 @@ public final class AvroUtils
       record.put(field.pos(), value);
    }
 
-   public static Object get(String fieldName, DataFileStream stream, GenericData.Record record)
+   public static Object get(String fieldName, GenericData.Record record, Object defaultValue)
    {
-      Schema schema = stream.getSchema();
+      Schema decodedWithSchema = record.getSchema();
 
-      Schema.Field field = schema.getFields().stream()
+      Optional<Schema.Field> field = decodedWithSchema.getFields().stream()
          .filter(i -> i.name().equals(fieldName) || i.aliases().contains(fieldName))
-         .findFirst()
-         .get();
+         .findFirst();
 
-      return record.get(field.pos());
+      if(field.isPresent())
+      {
+         return record.get(field.get().pos());
+      }
+      else
+      {
+         return defaultValue;
+      }
    }
 
    public static <T, R> List<R> getArray(GenericData.Record record, String fieldName, Function<T, R> transformer)

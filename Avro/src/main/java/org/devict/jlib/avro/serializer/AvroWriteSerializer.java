@@ -6,7 +6,7 @@ import org.apache.avro.generic.GenericData;
 import org.apache.avro.generic.GenericDatumWriter;
 import org.apache.avro.util.Utf8;
 import org.devict.jlib.avro.AvroUtils;
-import org.devict.jlib.avro.data.Employee;
+import org.devict.jlib.avro.data.AdvancedEmployee;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -22,10 +22,10 @@ public final class AvroWriteSerializer
 
    public AvroWriteSerializer() throws IOException
    {
-      this.schema = new Schema.Parser().parse(AvroWriteSerializer.class.getClassLoader().getResourceAsStream("Employee2.avsc"));
+      this.schema = new Schema.Parser().parse(AvroWriteSerializer.class.getClassLoader().getResourceAsStream("AdvancedEmployee.avsc"));
    }
 
-   public void serialize(Employee employee, OutputStream out) throws IOException
+   public void serialize(AdvancedEmployee employee, OutputStream out) throws IOException
    {
       GenericDatumWriter datum = new GenericDatumWriter(schema);
       DataFileWriter writer = new DataFileWriter(datum);
@@ -41,12 +41,13 @@ public final class AvroWriteSerializer
       }
    }
 
-   public GenericData.Record serialize(Employee employee)
+   public GenericData.Record serialize(AdvancedEmployee employee)
    {
       GenericData.Record record = new GenericData.Record(schema);
 
       AvroUtils.put("name", employee.getName(), record);
       AvroUtils.put("age", employee.getAge(), record);
+      AvroUtils.put("gender", employee.getGender(), record);
 
       int numberOfEmails = (employee.getMails() != null) ? employee.getMails().size() : 0;
       GenericData.Array<Utf8> emails = new GenericData.Array<>(numberOfEmails, schema.getField("emails").schema());

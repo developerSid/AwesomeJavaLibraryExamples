@@ -16,7 +16,7 @@ public class AdvancedEmployee extends Employee
 
    }
 
-   public AdvancedEmployee(String name, int age, List<String> emails, Employee b, String gender)
+   public AdvancedEmployee(String name, int age, List<String> emails, String gender)
    {
       super(name, age, emails);
       this.gender = gender;

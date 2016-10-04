@@ -5,12 +5,10 @@ import org.apache.avro.file.DataFileStream;
 import org.apache.avro.generic.GenericData;
 import org.apache.avro.generic.GenericDatumReader;
 import org.devict.jlib.avro.AvroUtils;
-import org.devict.jlib.avro.data.AdvancedEmployee;
+import org.devict.jlib.avro.data.Employee;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
-import java.util.stream.Collectors;
 
 /**
  * Created by Gary on 10/2/16.
@@ -26,11 +24,11 @@ public final class AvroReadDeserializer
       this.schema = new Schema.Parser().parse(AvroWriteSerializer.class.getClassLoader().getResourceAsStream("Employee.avsc"));
    }
 
-   public AdvancedEmployee deserialize(InputStream in) throws IOException
+   public Employee deserialize(InputStream in) throws IOException
    {
       GenericDatumReader datum = new GenericDatumReader(schema);
       DataFileStream reader = new DataFileStream(in, datum);
-      AdvancedEmployee employee = null;
+      Employee employee = null;
 
       try
       {
@@ -38,13 +36,12 @@ public final class AvroReadDeserializer
 
          if(reader.hasNext())
          {
-            employee = new AdvancedEmployee();
+            employee = new Employee();
 
             reader.next(record);
 
-            employee.setName(AvroUtils.get("name", reader, record).toString());
-            employee.setAge(Integer.parseInt(AvroUtils.get("yrs", reader, record).toString()));
-            employee.setGender(AvroUtils.get("gender", reader, record).toString());
+            employee.setName(AvroUtils.get("name", record, "").toString());
+            employee.setAge(Integer.parseInt(AvroUtils.get("yrs", record, "0").toString()));
             //employee.setMails(readEmails(record, reader));
          }
 
@@ -54,12 +51,5 @@ public final class AvroReadDeserializer
       {
          reader.close();
       }
-   }
-
-   private List<String> readEmails(GenericData.Record record, DataFileStream reader)
-   {
-      GenericData.Array<?> emails = (GenericData.Array)AvroUtils.get("emails", reader, record);
-
-      return emails.stream().map(Object::toString).collect(Collectors.toList());
    }
 }
