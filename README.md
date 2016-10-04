@@ -73,10 +73,10 @@ library (because they don't actually have to write business logic in Java)
     
 ## [Apache Avro](https://avro.apache.org/, "Schema based Data Serialization")
 Apache Avro is very similar to Google's Protocol buffers, however it's main advantage is that it sends the schema
-the data was enconded with along with the message making it easier to evolve the schema over time.  This is useful
+the data was encoded with along with the message making it easier to evolve the schema over time.  This is useful
 when building distributed systems using messaging middleware like Apache Kafka. When used with a Schema server
 you can build flexible processing systems that aren't as tightly coupled as they would be if you just shared a library
-of data classes for each application.  Meaning you can upgrade applications slowly allowing for different teams to 
+of data classes for each application.  Meaning you can upgrade applications slowly allowing for different teams to
 build separate parts of the system without perfect knowledge of the other applications.
 
 The example provided here isn't as clear cut as the others because I wanted to show changing the schema slightly.
@@ -84,7 +84,9 @@ The example provided here isn't as clear cut as the others because I wanted to s
 To Run
 
 1. java -cp Avro/build/libs/Avro.jar org.devict.jlib.avro.ExampleAvroWrite #write with an older schema
+   1. This program uses the "newer" AdvancedEmployee schema to encode the message
 1. java -cp Avro/build/libs/Avro.jar org.devict.jlib.avro.ExampleAvroRead #read with a newer schema
+   1. This program uses the "older" Employee schema to decode the message
 
 ## [Logback](http://logback.qos.ch, "Logback Logging Library")
 This is the logging library I prefer right now primarily because it allows for configuration through

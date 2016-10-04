@@ -12,7 +12,9 @@ import java.util.stream.Collectors;
 /**
  * Created by Gary on 10/2/16.
  *
- * Simple Utility methods for dealing with Avro
+ * Simple Utility methods for dealing with Avro.  There is a good chance that Avro provides this type of code, but I haven't found it yet.
+ * Also this is very basic and doesn't handled nested records and I would like it to be type safe rather than taking and returning java.lang.Object
+ * for all the results.
  */
 public final class AvroUtils
 {
@@ -49,9 +51,9 @@ public final class AvroUtils
 
    public static <T, R> List<R> getArray(GenericData.Record record, String fieldName, Function<T, R> transformer)
    {
-      GenericData.Array<T> emails = (GenericData.Array<T>)record.get(fieldName);
+      GenericData.Array<T> array = (GenericData.Array<T>)record.get(fieldName);
 
-      return emails.stream()
+      return array.stream()
          .map(transformer)
          .collect(Collectors.toList());
    }

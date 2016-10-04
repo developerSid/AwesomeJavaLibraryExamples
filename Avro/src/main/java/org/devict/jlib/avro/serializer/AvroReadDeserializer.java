@@ -42,7 +42,7 @@ public final class AvroReadDeserializer
 
             employee.setName(AvroUtils.get("name", record, "").toString());
             employee.setAge(Integer.parseInt(AvroUtils.get("yrs", record, "0").toString()));
-            //employee.setMails(readEmails(record, reader));
+            employee.setMails(AvroUtils.getArray(record, "emails", Object::toString));
          }
 
          return employee;
