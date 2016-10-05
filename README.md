@@ -98,10 +98,12 @@ The example provided here isn't as clear cut as the others because I wanted to s
 
 To Run
 
-1. java -cp Avro/build/libs/Avro.jar org.devict.jlib.avro.ExampleAvroWrite #write with an older schema
+1. java -cp Avro/build/libs/Avro.jar org.devict.jlib.avro.ExampleAvroWrite > out.avro #write with an older schema to out.avro
    1. This program uses the "newer" AdvancedEmployee schema to encode the message
-1. java -cp Avro/build/libs/Avro.jar org.devict.jlib.avro.ExampleAvroRead #read with a newer schema
+1. java -cp Avro/build/libs/Avro.jar org.devict.jlib.avro.ExampleAvroRead < out.avro #read with a newer schema from out.avro
    1. This program uses the "older" Employee schema to decode the message
+* Your Other option is to use the unix way of doing applications you can run
+  * java -cp Avro/build/libs/Avro.jar org.devict.jlib.avro.ExampleAvroWrite | java -cp Avro/build/libs/Avro.jar org.devict.jlib.avro.ExampleAvroRead
 
 ## [Logback](http://logback.qos.ch, "Logback Logging Library")
 This is the logging library I prefer right now primarily because it allows for configuration through
