@@ -85,7 +85,11 @@ library (because they don't actually have to write business logic in Java)
 (However they have added a bunch of stuff inspired by this library over the years see java.util.Collections)
   * CollectionUtils - helpful utility methods for dealing with collections
     1. java -cp Collections/build/libs/Collections.jar org.devict.jlib.collections.ExampleCollectionUtils
-    
+    1. java -cp Collections/build/libs/Collections.jar org.devict.jlib.collections.ExampleCaseInsensitiveMap
+    1. java -cp Collections/build/libs/Collections.jar org.devict.jlib.collections.ExampleCollectionUtils
+    1. java -cp Collections/build/libs/Collections.jar org.devict.jlib.collections.ExampleMultiValueMap
+    1. java -cp Collections/build/libs/Collections.jar org.devict.jlib.collections.ExampleNonNullCaseInsensitiveMap
+
 ## [Apache Avro](https://avro.apache.org/ "Schema based Data Serialization")
 Apache Avro is very similar to Google's Protocol buffers, however it's main advantage is that it sends the schema
 the data was encoded with along with the message making it easier to evolve the schema over time.  This is useful
@@ -140,5 +144,4 @@ to build simple broadcast/receiving messages.
 
 The example uses the default cluster configuration which is UDP.  This may not scale as far 
 as you may need, and may not cross collision domains, depends on how your network is configured.
- 
  

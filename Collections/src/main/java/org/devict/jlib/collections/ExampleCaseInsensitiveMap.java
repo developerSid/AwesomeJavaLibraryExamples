@@ -5,7 +5,7 @@ import org.apache.commons.collections4.map.CaseInsensitiveMap;
 /**
  * Created by Gary on 10/5/16.
  *
- * Example using a map that uses case insentive keys
+ * Example using a map that uses case insensitive keys
  */
 public class ExampleCaseInsensitiveMap
 {
