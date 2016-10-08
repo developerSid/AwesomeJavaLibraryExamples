@@ -144,4 +144,9 @@ to build simple broadcast/receiving messages.
 
 The example uses the default cluster configuration which is UDP.  This may not scale as far 
 as you may need, and may not cross collision domains, depends on how your network is configured.
+
+## [Apache HTTP Components Server](https://hc.apache.org "Embeddable Asynchronous HTTP Server")
+  HTTP Components is a collection of what you could call basic HTTP building blocks for building up larger HTTP based communications systems. AKA 
+  embedded HTTP Servers and clients.
+  
  
