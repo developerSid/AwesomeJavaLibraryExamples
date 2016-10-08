@@ -1,5 +1,6 @@
-package org.devict.jlib.cluster.agent;
+package org.devict.jlib.cluster;
 
+import org.devict.jlib.cluster.agent.AgentMessageReceiver;
 import org.jgroups.JChannel;
 
 import java.util.concurrent.CountDownLatch;

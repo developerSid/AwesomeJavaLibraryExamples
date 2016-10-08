@@ -128,15 +128,15 @@ To run the example
     - Handler: The server that will broadcast messages to listening nodes throughout the cluster
     - Agent: The node within the cluster that is listening for messages
 * JGroupsHandler
-  * Broadcasts a messge received from the command line and passes it to the cluster
+  * Broadcasts a message received from the command line and passes it to the cluster
 * JGroupsAgent
   * Receives messages from the main cluster server
   
 To run the examples run these commands in 3 separate console windows
 
-1. java -Djava.net.preferIPv4Stack=true -cp JGroupsHandler/build/libs/JGroupsHandler.jar org.devict.jlib.cluster.handler.JClusterHandler
-1. java -Djava.net.preferIPv4Stack=true -cp JGroupsAgent/build/libs/JGroupsAgent.jar org.devict.jlib.cluster.agent.JClusterAgent 
-1. java -Djava.net.preferIPv4Stack=true -cp JGroupsAgent/build/libs/JGroupsAgent.jar org.devict.jlib.cluster.agent.JClusterAgent
+1. java -Djava.net.preferIPv4Stack=true -cp JGroups/build/libs/JGroups.jar org.devict.jlib.cluster.JClusterHandler
+1. java -Djava.net.preferIPv4Stack=true -cp JGroups/build/libs/JGroups.jar org.devict.jlib.cluster.JClusterAgent 
+1. java -Djava.net.preferIPv4Stack=true -cp JGroups/build/libs/JGroups.jar org.devict.jlib.cluster.JClusterAgent
 
 ### JGroups Example Notes:  
 This JGroups structure is not the only option, but is just an illustration of how easy it is 

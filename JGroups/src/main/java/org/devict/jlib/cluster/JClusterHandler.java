@@ -1,4 +1,4 @@
-package org.devict.jlib.cluster.handler;
+package org.devict.jlib.cluster;
 
 import org.apache.commons.lang3.StringUtils;
 import org.jgroups.JChannel;
@@ -26,7 +26,14 @@ public final class JClusterHandler
 
          for(String msg = in.readLine(); !StringUtils.equalsIgnoreCase("QUIT", msg); msg = in.readLine())
          {
-            channel.send(new Message(null, null, msg));
+            try
+            {
+               channel.send(new Message(null, null, msg));
+            }
+            catch(Exception e)
+            {
+               System.out.println(e.getMessage());
+            }
             System.out.print("> ");
          }
       }
