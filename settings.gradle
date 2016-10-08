@@ -1,6 +1,7 @@
 
 include 'Lang'
 include 'Collections'
+include 'ComponentsHTTPServer'
 include 'Logback'
 include 'Avro'
 include 'JGroups'

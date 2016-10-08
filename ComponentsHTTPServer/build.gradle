@@ -1,0 +1,4 @@
+dependencies {
+   compile 'org.apache.httpcomponents:httpcore-nio:4.4.5'
+   compile 'commons-io:commons-io:2.5'
+}
