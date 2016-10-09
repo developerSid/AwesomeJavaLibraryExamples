@@ -5,4 +5,4 @@ include 'Logback'
 include 'Avro'
 include 'JGroups'
 
-rootProject.name = 'DevICTJavaLibraries'
+rootProject.name = 'AwesomeJavaLibraryExamples'
