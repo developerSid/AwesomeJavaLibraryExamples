@@ -15,7 +15,7 @@ if(enabledLoggers.contains('FILE'))
 {
    def logFileDir = new File(logFileHome)
 
-   if(logFileDir.mkdirs() || logFileDir.exists())
+   if(logFileDir.mkdirs() || logFileDir.exists()) //create the directory structure.  This may not be strictly necessary, but I've had issues in the past with Logback not doing this where Log4j would
    {
       appender('FILE', RollingFileAppender) {  //configures appender to append to a log file and to roll once per day and keep up to a maximum of 7 days worth of logs
          file = "${logFileHome}/${baseLogFileName}.log"
@@ -44,6 +44,7 @@ if(enabledLoggers.contains('STDOUT'))
    }
 }
 
+// this can be changed to any number of things.  These are the ones that I carried around most of the time.
 logger('org.springframework', ERROR)
 logger('org.eclipse', ERROR)
 logger('org.apache', ERROR)

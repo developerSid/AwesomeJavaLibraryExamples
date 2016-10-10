@@ -27,9 +27,9 @@ opinion abuse what you should use the Gradle multi-project support so please do 
 do this with a production system.
 
 1. Clone this project
-   1. git clone https://github.com/developerSid/DevICTJavaLibraries.git
+   1. git clone https://github.com/developerSid/AwesomeJavaLibraryExamples.git
 1. Change directory to the one created by the clone
-   1. cd DevICTJavaLibraries
+   1. cd AwesomeJavaLibraryExamples
 1. Build projects
    1. ./gradlew clean build
       *  This builds an uberjar for all the projects to make it easy to run the examples. 
@@ -119,7 +119,10 @@ Groovy and implements the Slf4j (simple logging facade for java) natively.
     * can be configured to roll on size also (as well as other custom methods)
 
 To run the example
-1. java -cp Logback/build/libs/Logback.jar org.devict.jlib.logback.ExampleLogback
+1. java -Dlog.dir=/tmp/LogbackExample -cp Logback/build/libs/Logback.jar org.devict.jlib.logback.ExampleLogback
+   1. Note: -D is setting a Java system property (kind of like an environment variable, but only one that the JVM cares about)
+   1. The log.dir system property is optional as the logging configuration does have a default.  In this case /tmp/log, if you are on Windows this will blow up
+   you should change it to something else if you are using Windows to run this example.
 
 ## [JGroups clustering](http://www.jgroups.org "JGroups clustering")
   JGroups is a toolkit for reliable messaging. It can be used to create clusters whose nodes can send messages to each other.
