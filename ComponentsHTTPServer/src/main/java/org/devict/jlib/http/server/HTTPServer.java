@@ -22,7 +22,7 @@ public class HTTPServer
       try
       {
          IOReactorConfig config = IOReactorConfig.custom().setSoTimeout(15000).setTcpNoDelay(true).build();
-         final HttpServer server = ServerBootstrap.bootstrap().setListenerPort(PORT).setServerInfo("Test/1.1").setIOReactorConfig(config).setExceptionLogger(ExceptionLogger.STD_ERR).registerHandler("*", new HttpTimeHandler()).create();
+         final HttpServer server = ServerBootstrap.bootstrap().setListenerPort(PORT).setServerInfo("Test/1.1").setIOReactorConfig(config).setExceptionLogger(ExceptionLogger.STD_ERR).registerHandler("*", new HTTPTimeHandler()).create();
 
          server.start();
 

@@ -15,7 +15,7 @@ import java.time.format.DateTimeFormatter;
 /**
  * Created by Gary on 10/9/16.
  */
-public class HttpTimeHandler implements HttpAsyncRequestHandler<HttpRequest>
+public class HTTPTimeHandler implements HttpAsyncRequestHandler<HttpRequest>
 {
    @Override public HttpAsyncRequestConsumer<HttpRequest> processRequest(HttpRequest request, HttpContext context) throws HttpException, IOException
    {
@@ -29,6 +29,7 @@ public class HttpTimeHandler implements HttpAsyncRequestHandler<HttpRequest>
       if(request.getRequestLine().getMethod().equalsIgnoreCase("GET"))
       {
          response.setStatusCode(HttpStatus.SC_OK);
+         response.setHeader("Content-Type", "text/plain");
          response.setEntity(new StringEntity(LocalDateTime.now().format(DateTimeFormatter.ISO_DATE_TIME)));
       }
       else
