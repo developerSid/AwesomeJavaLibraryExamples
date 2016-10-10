@@ -129,6 +129,7 @@ Groovy and implements the Slf4j (simple logging facade for java) natively.
     * can be configured to roll on size also (as well as other custom methods)
 
 To run the example
+
 1. java -Dlog.dir=/tmp/LogbackExample -cp Logback/build/libs/Logback.jar org.devict.jlib.logback.ExampleLogback
    1. Note: -D is setting a Java system property (kind of like an environment variable, but only one that the JVM cares about)
    1. The log.dir system property is optional as the logging configuration does have a default.  In this case /tmp/log, if you are on Windows this will blow up
