@@ -140,8 +140,18 @@ To Run
 ### An HTTP client that requests from a the above server and displays the time.
 1. java -cp ComponentsHTTPClient/build/libs/ComponentsHTTPClient.jar org.devict.jlib.http.client.HTTPClient
    1. make sure you are running the above server
+   
+## [Google Guava](https://github.com/google/guava "Utility library of many things")
 
-## [Logback](http://logback.qos.ch, "Logback Logging Library")
+Google's Guava library is the result of many internal and external Google projects that is useful as a base for many reusable components.  Many of 
+it's use cases seem more advanced than much of the stuff that available in Apache Commons.
+
+To run the examples
+
+1. java -cp Guava/build/libs/Guava.jar org.devict.jlib.guava.ExampleEventBus
+1. java -cp Guava/build/libs/Guava.jar org.devict.jlib.guava.ExampleTable
+
+## [Logback](http://logback.qos.ch "Logback Logging Library")
 This is the logging library I prefer right now primarily because it allows for configuration through
 Groovy and implements the Slf4j (simple logging facade for java) natively.
 
@@ -179,9 +189,3 @@ to build simple broadcast/receiving messages.
 
 The example uses the default cluster configuration which is UDP.  This may not scale as far 
 as you may need, and may not cross collision domains, depends on how your network is configured.
-
-## [Apache HTTP Components Server](https://hc.apache.org "Embeddable Asynchronous HTTP Server")
-  HTTP Components is a collection of what you could call basic HTTP building blocks for building up larger HTTP based communications systems. AKA 
-  embedded HTTP Servers and clients.
-  
- 
