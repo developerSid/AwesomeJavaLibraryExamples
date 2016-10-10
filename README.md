@@ -89,6 +89,11 @@ library (because they don't actually have to write business logic in Java)
     1. java -cp Collections/build/libs/Collections.jar org.devict.jlib.collections.ExampleCollectionUtils
     1. java -cp Collections/build/libs/Collections.jar org.devict.jlib.collections.ExampleMultiValueMap
     1. java -cp Collections/build/libs/Collections.jar org.devict.jlib.collections.ExampleNonNullCaseInsensitiveMap
+### [Apache Commons IO](https://commons.apache.org/proper/io "Apache Commons IO")
+* More useful stuff that is missing from the Java standard libary.  (However this too is less useful if you are using java 8 and NIO 2)
+
+To Run
+1. java -cp IO/build/libs/IO.jar org.devict.io.ExampleIO
 
 ## [Apache Avro](https://avro.apache.org/ "Schema based Data Serialization")
 Apache Avro is very similar to Google's Protocol buffers, however it's main advantage is that it sends the schema

@@ -1,5 +1,6 @@
 
 include 'Lang'
+include 'IO'
 include 'Collections'
 include 'ComponentsHTTPServer'
 include 'ComponentsHTTPClient'
