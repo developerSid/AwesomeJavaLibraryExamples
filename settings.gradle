@@ -2,6 +2,7 @@
 include 'Lang'
 include 'IO'
 include 'Collections'
+include 'PDFBox'
 include 'ComponentsHTTPServer'
 include 'ComponentsHTTPClient'
 include 'Logback'

@@ -97,6 +97,21 @@ To Run
 
 1. java -cp IO/build/libs/IO.jar org.devict.io.ExampleIO
 
+## [Apache PDFBox](https://pdfbox.apache.org/ "Programmatic creation of PDFs")
+
+### Features
+* Create PDFs
+* Extract Text
+* Print using the Java Print API
+* Split & Merge
+* Fill Forms
+* Save as Image
+
+To Run
+
+1. java -cp PDFBox/build/libs/PDFBox.jar org.devict.jlib.pdf.ExampleHelloPdf
+1. java -cp PDFBox/build/libs/PDFBox.jar org.devict.jlib.pdf.ExampleAddImage
+
 ## [Apache Avro](https://avro.apache.org/ "Schema based Data Serialization")
 Apache Avro is very similar to Google's Protocol buffers, however it's main advantage is that it sends the schema
 the data was encoded with along with the message making it easier to evolve the schema over time.  This is useful
@@ -148,16 +163,15 @@ To run the example
     Terminalogy 
     - Handler: The server that will broadcast messages to listening nodes throughout the cluster
     - Agent: The node within the cluster that is listening for messages
-* JGroupsHandler
-  * Broadcasts a message received from the command line and passes it to the cluster
-* JGroupsAgent
-  * Receives messages from the main cluster server
   
 To run the examples run these commands in 3 separate console windows
 
 1. java -Djava.net.preferIPv4Stack=true -cp JGroups/build/libs/JGroups.jar org.devict.jlib.cluster.JClusterHandler
-1. java -Djava.net.preferIPv4Stack=true -cp JGroups/build/libs/JGroups.jar org.devict.jlib.cluster.JClusterAgent 
+   1. Starts up the broadcast server
 1. java -Djava.net.preferIPv4Stack=true -cp JGroups/build/libs/JGroups.jar org.devict.jlib.cluster.JClusterAgent
+   1. Starts up a single instance of a receiver that receives messages from the server
+1. java -Djava.net.preferIPv4Stack=true -cp JGroups/build/libs/JGroups.jar org.devict.jlib.cluster.JClusterAgent
+   1. Starts up a single instance of a receiver that receives messages from the server
 
 ### JGroups Example Notes:  
 This JGroups structure is not the only option, but is just an illustration of how easy it is 
