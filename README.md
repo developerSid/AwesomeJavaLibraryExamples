@@ -140,6 +140,8 @@ To Run
 ### An HTTP client that requests from a the above server and displays the time.
 1. java -cp ComponentsHTTPClient/build/libs/ComponentsHTTPClient.jar org.devict.jlib.http.client.HTTPClient
    1. make sure you are running the above server
+   
+## [Google Guava](https://github.com/google/guava "Utility library of many things")
 
 ## [Logback](http://logback.qos.ch, "Logback Logging Library")
 This is the logging library I prefer right now primarily because it allows for configuration through
