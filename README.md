@@ -143,7 +143,7 @@ To Run
    
 ## [Google Guava](https://github.com/google/guava "Utility library of many things")
 
-## [Logback](http://logback.qos.ch, "Logback Logging Library")
+## [Logback](http://logback.qos.ch "Logback Logging Library")
 This is the logging library I prefer right now primarily because it allows for configuration through
 Groovy and implements the Slf4j (simple logging facade for java) natively.
 
