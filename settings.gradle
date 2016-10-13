@@ -9,5 +9,6 @@ include 'Guava'
 include 'Logback'
 include 'Avro'
 include 'JGroups'
+include 'Stdlib'
 
 rootProject.name = 'AwesomeJavaLibraryExamples'
