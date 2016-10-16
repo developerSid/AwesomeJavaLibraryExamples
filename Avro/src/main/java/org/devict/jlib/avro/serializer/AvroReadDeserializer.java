@@ -27,7 +27,7 @@ public final class AvroReadDeserializer
    public Employee deserialize(InputStream in) throws IOException
    {
       GenericDatumReader datum = new GenericDatumReader(schema);
-      DataFileStream reader = new DataFileStream(in, datum);
+      DataFileStream<GenericData.Record> reader = new DataFileStream<GenericData.Record>(in, datum);
       Employee employee = null;
 
       try
