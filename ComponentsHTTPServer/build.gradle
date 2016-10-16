@@ -1,3 +1,0 @@
-dependencies {
-   compile 'org.apache.httpcomponents:httpcore-nio:4.4.5'
-}

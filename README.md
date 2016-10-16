@@ -1,11 +1,9 @@
 # The Java Library System
-Have you ever been sitting there writing your own PDF generation code and find yourself 
-hoping that someone doesn't move that image you need to embed in every file you generate 
-from its required location on the network share?  Well never fear the Java library 
-ecosystem is here to save you from that worry and thousands of others just like it.  The 
-greatest thing about the Java Platform is the plethora of open source code at your 
-fingertips maintained by armies of great people who only want to make your life easier.  
-If you are lazy like me you'll love the Java Library Ecosystem.
+Have you ever been sitting there writing your own PDF generation code and find 
+yourself hoping that sysadmin doesn’t upgrade the company from Acrobat Reader 
+from version 5.0 to 10, because your PDF would no longer render? Well never 
+fear the Java library ecosystem is here to save you from that worry and thousands 
+of others just like it.
 
 
 ## [Difference between a library and a framework](http://www.programcreek.com/2011/09/what-is-the-difference-between-a-java-library-and-a-framework/, "Difference between a library and a framework")

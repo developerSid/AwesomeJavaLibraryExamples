@@ -28,12 +28,12 @@ public class HTTPClient
       {
          HttpGet httpget = new HttpGet("http://localhost:8080/");
 
-         System.out.println("Executing request " + httpget.getRequestLine());
+         System.out.printf("Executing request %s\n", httpget.getRequestLine());
 
          CloseableHttpResponse responseBody = httpclient.execute(httpget);
          System.out.println("----------------------------------------");
-         Arrays.asList(responseBody.getAllHeaders()).forEach(i -> System.out.printf("%s/%s\n", i.getName(), i.getValue()));
-         System.out.println(EntityUtils.toString(responseBody.getEntity()));
+         Arrays.asList(responseBody.getAllHeaders()).forEach(i -> System.out.printf("Header: %s -> %s\n", i.getName(), i.getValue()));
+         System.out.printf("\nThe Time is: %s\n", EntityUtils.toString(responseBody.getEntity()));
       }
       finally
       {
