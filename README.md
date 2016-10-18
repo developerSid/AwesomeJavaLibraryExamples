@@ -157,11 +157,11 @@ To Run
 ## [Apache HTTP Components](http://hc.apache.org "Components for communicating via HTTP")
 
 ### An HTTP server that responds to any request with the time.
-1. java -cp ComponentsHTTPServer/build/libs/ComponentsHTTPServer.jar org.devict.jlib.http.server.HTTPServer
+1. java -cp HTTPComponents/build/libs/HTTPComponents.jar org.devict.jlib.http.server.HTTPServer
 1. curl -v -XGET http://localhost:8080/
 
 ### An HTTP client that requests from a the above server and displays the time.
-1. java -cp ComponentsHTTPClient/build/libs/ComponentsHTTPClient.jar org.devict.jlib.http.client.HTTPClient
+1. java -cp HTTPComponents/build/libs/HTTPComponents.jar org.devict.jlib.http.client.HTTPClient
    1. make sure you are running the above server
    
 ## [Google Guava](https://github.com/google/guava "Utility library of many things")
