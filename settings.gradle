@@ -1,8 +1,10 @@
 
 include 'Lang'
 include 'IO'
+include 'CSV'
 include 'Collections'
 include 'PDFBox'
+include 'JOPTSimple'
 include 'HTTPComponents'
 include 'Guava'
 include 'Logback'

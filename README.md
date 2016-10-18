@@ -95,6 +95,31 @@ To Run
 
 1. java -cp IO/build/libs/IO.jar org.devict.io.ExampleIO
 
+### [Apache Commons CSV](http://commons.apache.org/proper/commons-csv/ "Apache Commons CSV")
+* Great little CSV parser that supports many formats
+  * Microsoft Excel
+  * MySQL
+  * RFC 4180
+  * Others
+  
+To Run
+
+1. java -cp CSV/build/libs/CSV.jar org.devict.jlib.csv.ExampleStudentCSV
+
+## [jopt-simple](http://pholser.github.io/jopt-simple/ "Java CLI parser")
+* Best CLI parser out there
+* Used by many projects
+  * OpenJDK
+  * Gradle
+  * Others
+  
+To Run
+
+1. java -cp JOPTSimple/build/libs/JOPTSimple.jar org.devict.jlib.jopt.ExampleCLI
+1. java -cp JOPTSimple/build/libs/JOPTSimple.jar org.devict.jlib.jopt.ExampleCLI --help
+1. java -cp JOPTSimple/build/libs/JOPTSimple.jar org.devict.jlib.jopt.ExampleCLI -e http://www.google.com/ --username Prez --password 12345 --file test.txt -c config.ini
+
+
 ## [Apache PDFBox](https://pdfbox.apache.org/ "Programmatic creation of PDFs")
 
 ### Features
