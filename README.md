@@ -212,3 +212,12 @@ to build simple broadcast/receiving messages.
 
 The example uses the default cluster configuration which is UDP.  This may not scale as far 
 as you may need, and may not cross collision domains, depends on how your network is configured.
+
+## Java Standard Library
+   This is stuf that is available in the standard library
+1. java -cp Stdlib/build/libs/Stdlib.jar org.devict.jlib.stdlib.ExampleDateTime
+   1. shows an example of using the Java 8 time API doing simple comparisons and getting the Date Time from a file
+1. java -cp Stdlib/build/libs/Stdlib.jar org.devict.jlib.stdlib.ExampleStream
+   1. simple java 8 streaming example
+1. java -cp Stdlib/build/libs/Stdlib.jar org.devict.jlib.stdlib.ExampleThreading
+   1. simple threading example using the standard libraries threading facilities added in Java 5
