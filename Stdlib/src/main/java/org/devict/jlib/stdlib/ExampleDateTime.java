@@ -27,6 +27,7 @@ public class ExampleDateTime
 
       LocalDateTime tempFileTime = LocalDateTime.ofInstant(Files.getLastModifiedTime(tempFile.toPath()).toInstant(), ZoneId.systemDefault());
 
+      System.out.printf("Temp file path is %s\n", tempFile.toPath().toString());
       System.out.printf("Temp file with time of %s was created after %s %b\n", tempFileTime, past, tempFileTime.isAfter(past));
 
       tempFile.delete();
