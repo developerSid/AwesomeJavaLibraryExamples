@@ -11,6 +11,8 @@ import org.devict.jlib.avro.data.AdvancedEmployee;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import static org.apache.avro.generic.GenericData.*;
+
 /**
  * Created by Gary on 10/2/16.
  * <p>
@@ -27,8 +29,8 @@ public final class AvroWriteSerializer
 
    public void serialize(AdvancedEmployee employee, OutputStream out) throws IOException
    {
-      GenericDatumWriter datum = new GenericDatumWriter(schema);
-      DataFileWriter writer = new DataFileWriter(datum);
+      GenericDatumWriter<Record> datum = new GenericDatumWriter<>(schema);
+      DataFileWriter<Record> writer = new DataFileWriter<>(datum);
 
       try
       {
@@ -41,9 +43,9 @@ public final class AvroWriteSerializer
       }
    }
 
-   public GenericData.Record serialize(AdvancedEmployee employee)
+   public Record serialize(AdvancedEmployee employee)
    {
-      GenericData.Record record = new GenericData.Record(schema);
+      Record record = new Record(schema);
 
       AvroUtils.put("name", employee.getName(), record);
       AvroUtils.put("age", employee.getAge(), record);
