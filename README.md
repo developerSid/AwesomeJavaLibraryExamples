@@ -213,6 +213,14 @@ to build simple broadcast/receiving messages.
 The example uses the default cluster configuration which is UDP.  This may not scale as far 
 as you may need, and may not cross collision domains, depends on how your network is configured.
 
+## Groovy embedded example
+This illustrates how to embed a simple GroovyShell in an application to parse simple scripts.  The 
+provided example parses a list of maps defined in a String to a list of maps that the Java application
+can read.
+
+To run the example
+1. java -cp Groovy/build/libs/Groovy.jar org.devict.jlib.groovy.ExampleEmbeddedGroovyStringToMap
+
 ## Java Standard Library
    This is stuf that is available in the standard library
 1. java -cp Stdlib/build/libs/Stdlib.jar org.devict.jlib.stdlib.ExampleDateTime
