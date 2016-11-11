@@ -1,4 +1,4 @@
-package org.devict.jlib.stdlib;
+package org.devict.jlib.stdlib.util;
 
 import org.apache.commons.lang3.RandomUtils;
 

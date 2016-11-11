@@ -1,4 +1,4 @@
-package org.devict.jlib.stdlib;
+package org.devict.jlib.stdlib.util;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;

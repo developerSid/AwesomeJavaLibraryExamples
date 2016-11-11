@@ -229,3 +229,7 @@ To run the example
    1. simple java 8 streaming example
 1. java -cp Stdlib/build/libs/Stdlib.jar org.devict.jlib.stdlib.ExampleThreading
    1. simple threading example using the standard libraries threading facilities added in Java 5
+1. java -cp Stdlib/build/libs/Stdlib.jar org.devict.jlib.stdlib.ExampleFileWatcher
+   1. example for using the Java 7 file watching utility added
+   1. need to see where the temp directory is created and then create a file called watch.test in that directory.
+      1. You can also add text to that file to cause the file changed even to fire
