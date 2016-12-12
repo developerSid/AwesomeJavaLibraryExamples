@@ -21,5 +21,7 @@ public final class ExampleStringUtils
       System.out.printf("Strings %s is blank: [%b]\n", op1, StringUtils.isBlank(op1));
       System.out.printf("Strings %s is blank: [%b]\n", op3, StringUtils.isBlank(op3));
       System.out.printf("Strings %s is blank: [%b]\n", op4, StringUtils.isBlank(op4));
+
+      System.out.printf("Value between _ in E_1_1234 is: %s\n", StringUtils.substringBetween("E_1_1234", "_", "_"));
    }
 }
