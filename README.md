@@ -233,3 +233,5 @@ To run the example
    1. example for using the Java 7 file watching utility added
    1. need to see where the temp directory is created and then create a file called watch.test in that directory.
       1. You can also add text to that file to cause the file changed even to fire
+1. java -cp Stdlib/build/libs/Stdlib.jar org.devict.jlibstdlib.ExampleURI
+   1. exmaple showing some useful parsting of URI's using the java.net.URI class
