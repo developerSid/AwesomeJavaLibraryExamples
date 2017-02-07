@@ -235,3 +235,10 @@ To run the example
       1. You can also add text to that file to cause the file changed even to fire
 1. java -cp Stdlib/build/libs/Stdlib.jar org.devict.jlibstdlib.ExampleURI
    1. exmaple showing some useful parsting of URI's using the java.net.URI class
+   
+## [Faker](https://github.com/DiUS/java-faker "Faker port for Java")
+  This library is a port of Ruby's stympy/faker gem (as well as Perl's Data::Faker library) that generates fake data. It's useful when you're developing a new project
+  and need some pretty data for showcase.
+### Faker Example
+To run the example
+1. java -cp Faker/build/libs/Faker.jar org.devict.jlib.faker.ExampleFakerUsage
