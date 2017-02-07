@@ -2,6 +2,7 @@
 include 'Lang'
 include 'IO'
 include 'CSV'
+include 'Faker'
 include 'Collections'
 include 'PDFBox'
 include 'JOPTSimple'
