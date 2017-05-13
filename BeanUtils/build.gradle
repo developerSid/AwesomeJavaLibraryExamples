@@ -1,0 +1,9 @@
+apply plugin: 'groovy'
+
+dependencies {
+   compile 'commons-beanutils:commons-beanutils:1.9.3'
+   compile 'org.apache.commons:commons-lang3:3.5'
+
+   testCompile 'org.spockframework:spock-core:1.0-groovy-2.4'
+   testCompile 'cglib:cglib-nodep:3.1'
+}

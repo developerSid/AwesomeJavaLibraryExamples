@@ -3,7 +3,8 @@ package org.devict.jlib.collections
 import spock.lang.Specification
 
 /**
- * Created by Gary.Myers on 10/6/2016.*/
+ * Created by developerSid on 10/6/2016.
+ */
 class TestFilteringPredicatedMap extends Specification
 {
    def 'test default constructor add single good value' ()

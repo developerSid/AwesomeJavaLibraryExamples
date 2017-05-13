@@ -106,6 +106,13 @@ To Run
 
 1. java -cp CSV/build/libs/CSV.jar org.devict.jlib.csv.ExampleStudentCSV
 
+### [Apache Commons BeanUtils](http://commons.apache.org/proper/commons-beanutils/)
+* Utility library for dealing with Java Beans
+
+To run
+
+1. java -cp BeanUtils/build/libs/BeanUtils.jar org.devict.jlib.beanutils.CopyFromDifferentObjects
+
 ## [jopt-simple](http://pholser.github.io/jopt-simple/ "Java CLI parser")
 * Best CLI parser out there
 * Used by many projects

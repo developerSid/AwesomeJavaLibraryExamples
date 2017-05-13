@@ -1,4 +1,5 @@
 
+include 'BeanUtils'
 include 'Lang'
 include 'IO'
 include 'CSV'
