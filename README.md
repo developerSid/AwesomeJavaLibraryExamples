@@ -196,6 +196,16 @@ To run the example
    1. Note: -D is setting a Java system property (kind of like an environment variable, but only one that the JVM cares about)
    1. The log.dir system property is optional as the logging configuration does have a default.  In this case /tmp/log, if you are on Windows this will blow up
    you should change it to something else if you are using Windows to run this example.
+   
+## [Joda-Time](http://www.joda.org/joda-time "Joda-Time")
+
+Example on some possible uses for Joda-Time that make using Date's and Date Times much easier in Java
+
+To run the example
+
+1. java -cp JodaTime/build/libs/JodaTime.jar org.devict.jlib.jodatime.CalcluateOperationalPeriodBasedOnConfigurableDaysOfTheWeek
+   1. Note: This example shows how to manipulate Joda-Time objects by calculating an operational week based on a start day of Wednesday and an end day of 
+      Tuesday
 
 ## [JGroups clustering](http://www.jgroups.org "JGroups clustering")
   JGroups is a toolkit for reliable messaging. It can be used to create clusters whose nodes can send messages to each other.
