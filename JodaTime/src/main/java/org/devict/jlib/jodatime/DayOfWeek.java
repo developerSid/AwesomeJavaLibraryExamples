@@ -21,7 +21,7 @@ public enum DayOfWeek {
       return dayNumber;
    }
 
-   private static Optional<DayOfWeek> findByName(String name) {
+   public static Optional<DayOfWeek> findByName(String name) {
       for (DayOfWeek dayOfWeek: DayOfWeek.values()) {
          if (dayOfWeek.name().equalsIgnoreCase(name)) {
             return Optional.of(dayOfWeek);
