@@ -203,7 +203,7 @@ Example on some possible uses for Joda-Time that make using Date's and Date Time
 
 To run the example
 
-1. java -cp JodaTime/build/libs/JodaTime.jar org.devict.jlib.jodatime.CalcluateOperationalPeriodBasedOnConfigurableDaysOfTheWeek
+1. java -cp JodaTime/build/libs/JodaTime.jar org.devict.jlib.jodatime.CalculateOperationalPeriodBasedOnConfigurableDaysOfTheWeek
    1. Note: This example shows how to manipulate Joda-Time objects by calculating an operational week based on a start day of Wednesday and an end day of 
       Tuesday
 
